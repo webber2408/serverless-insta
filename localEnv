@@ -1,0 +1,10 @@
+SAMPLE_ENV_VAR=i-am-an-environment-variable
+
+DB_TYPE=mysql2
+DB_CONN=127.0.0.1
+DB_HOST=root
+DB_PORT=3306
+DB_PASS=mysql1234
+DB_NAME=demo
+
+JWT_SECRET=mysecret
