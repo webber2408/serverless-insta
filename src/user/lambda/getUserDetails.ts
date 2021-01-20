@@ -6,11 +6,11 @@ import { db } from '../../../src';
 export async function userDetailsHandler(
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> {
-  const userId = event.pathParameters.userId;
+  const username = event.pathParameters.username;
   try {
     const user = await db(USER_TABLE)
-      .where({ uuid: userId })
-      .select(['name', 'email']);
+      .where({ username })
+      .select(['name', 'email', 'username', 'bio']);
     return apiResponse._200({
       user,
     });

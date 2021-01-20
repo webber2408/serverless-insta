@@ -29,22 +29,22 @@ provider:
 
 functions:
   login:
-    handler: src/user/lambda/login.loginHandler
+    handler: src/auth/lambda/login.loginHandler
     events:
       - http:
-          path: api/v1/login
+          path: api/v1/auth/login
           method: POST
   register:
-    handler: src/user/lambda/register.registerHandler
+    handler: src/auth/lambda/register.registerHandler
     events:
       - http:
-          path: api/v1/register
+          path: api/v1/auth/register
           method: POST
   userDetail:
     handler: src/user/lambda/getUserDetails.userDetailsHandler
     events:
       - http:
-          path: api/v1/user/{userId}
+          path: api/v1/users/{username}
           method: get
           # private: true
           authorizer: authorizerFunc
@@ -52,7 +52,7 @@ functions:
     handler: src/user/lambda/updateUserDetails.updateDetailsHandler
     events:
       - http:
-          path: api/v1/user/
+          path: api/v1/profile
           method: put
           # private: true
           authorizer: authorizerFunc
@@ -60,7 +60,7 @@ functions:
     handler: src/follow/lambda/followUser.followUserHandler
     events:
       - http:
-          path: api/v1/user/{userId}/toggle-following
+          path: api/v1/users/{username}/toggle-following
           method: post
           # private: true
           authorizer: authorizerFunc

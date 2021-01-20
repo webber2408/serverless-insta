@@ -16,7 +16,7 @@ export async function registerHandler(
       .then(async (id) => {
         const user = await db(USER_TABLE)
           .where({ id: id })
-          .select(['uuid', 'name', 'email']);
+          .select(['username', 'name', 'email', 'bio']);
         return apiResponse._200({ user });
       });
   } catch (err) {

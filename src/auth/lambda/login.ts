@@ -24,7 +24,7 @@ export async function loginHandler(
     } else {
       return apiResponse._200({
         message: 'Login Successfull',
-        token: signToken(user[0].id),
+        token: signToken(user[0].username),
       });
     }
   } catch (err) {

@@ -36,6 +36,6 @@ exports.handler = function (event, _context, callback) {
 
   jwt.verify(token.substring(7), process.env.JWT_SECRET, (err, decoded) => {
     if (err) return callback('Unauthorized');
-    return callback(null, generatePolicy(decoded.id, 'Allow', event.methodArn));
+    return callback(null, generatePolicy(decoded.username, 'Allow', '*'));
   });
 };
