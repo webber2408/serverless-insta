@@ -5,7 +5,7 @@ Uses serverless (serverless-bundle, serverless-dotenv-plugin, serverless-offline
 ---
 
 ### Demo
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/6514427a13530665844f)  [![Download Collection](https://heremaps.github.io/postman-collections/img/download.svg)](https://www.getpostman.com/collections/6514427a13530665844f)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6514427a13530665844f)  [![Download Collection](https://heremaps.github.io/postman-collections/img/download.svg)](https://www.getpostman.com/collections/6514427a13530665844f)
 
 ### Requirements
 
